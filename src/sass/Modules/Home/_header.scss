@@ -1,0 +1,167 @@
+@use "../../variables";
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    outline: none;
+    font-family: variables.$default-font;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+h1 {
+    font-family: variables.$heading-font;
+}
+
+body {
+    background-color: #0c0b09;
+}
+
+header {
+    width: 100%;
+    z-index: 999;
+    height: 140px;
+    position: relative;
+}
+
+.link {
+    color: variables.$nav-color;
+    cursor: pointer;
+
+    &:hover {
+        color: variables.$accent-color;
+    }
+}
+
+//top header
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+
+.h-list>i {
+    color: variables.$accent-color;
+}
+
+.top-contacts {
+    display: flex;
+    gap: 20px;
+    a>i{
+        color: variables.$accent-color;
+    }
+}
+
+
+//main header
+.main-header {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    background-color: variables.$nav-background-color;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #0c0b09;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: variables.$heading-color;
+}
+
+nav>ul>li {
+    color: variables.$nav-color;
+}
+
+.h-list {
+    display: flex;
+    list-style: none;
+}
+
+.main-header>nav>.h-list {
+    gap: 25px;
+}
+
+//language switch
+.language-switch>ul>li {
+    color: variables.$nav-color;
+
+    &:hover {
+        color: variables.$accent-color;
+        cursor: pointer;
+    }
+}
+
+.language-switch>ul>li+li::before {
+    content: '/';
+    padding: 0 5px;
+    color: variables.$nav-color;
+}
+
+
+li.active-lang {
+    color: variables.$accent-color !important;
+}
+
+//book table button 
+.book-table {
+    border-radius: 25px;
+    border: variables.$accent-color 2px solid;
+    padding: 10px 20px;
+
+    &:hover {
+        background-color: variables.$accent-color;
+        color: variables.$nav-color !important;
+        
+    }
+}
+
+//menu dropdown
+.dropdown {
+    position: relative;
+
+    &:hover {
+
+        >a>i,
+        >a {
+            cursor: pointer;
+            color: variables.$accent-color;
+        }
+    }
+}
+
+.dropdown>a>i {
+    margin-left: 5px;
+}
+
+.dropdown>ul {
+    width: 15dvw;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: variables.$nav-dropdown-background-color;
+    padding: 10px;
+    list-style: none;
+    display: none;
+    opacity: 0;
+}
+
+.dropdown:hover>ul {
+    display: block;
+    opacity: 1;
+}
+
+.dropdown>ul>li {
+    padding: 10px 20px;
+}
+
+.dropdown .dropdown:hover>ul {
+    top: 0;
+    left: -100%;
+}

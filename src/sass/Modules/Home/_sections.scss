@@ -1,0 +1,24 @@
+main {
+    top: -140px;
+}
+
+.intro {
+    background-image: url(../../../../public/images/hero-bg.jpg);
+    height: 100dvh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: -140px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.intro:before {
+    content: "";
+    background: color-mix(in srgb, black, transparent 50%);
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+}

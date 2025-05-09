@@ -1,4 +1,175 @@
-*{
-padding:0;
-margin:0;
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  outline: none;
+  font-family: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  align-items: center;
+  transition: all 0.5s;
+}
+
+h1 {
+  font-family: "Playfair Display", sans-serif;
+}
+
+body {
+  background-color: #0c0b09;
+}
+
+header {
+  width: 100%;
+  z-index: 999;
+  height: 140px;
+  position: relative;
+}
+
+.link {
+  color: #ffffff;
+  cursor: pointer;
+}
+.link:hover {
+  color: #cda45e;
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.h-list > i {
+  color: #cda45e;
+}
+
+.top-contacts {
+  display: flex;
+  gap: 20px;
+}
+.top-contacts a > i {
+  color: #cda45e;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  background-color: rgba(12, 11, 9, 0.61);
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #0c0b09;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+nav > ul > li {
+  color: #ffffff;
+}
+
+.h-list {
+  display: flex;
+  list-style: none;
+}
+
+.main-header > nav > .h-list {
+  gap: 25px;
+}
+
+.language-switch > ul > li {
+  color: #ffffff;
+}
+.language-switch > ul > li:hover {
+  color: #cda45e;
+  cursor: pointer;
+}
+
+.language-switch > ul > li + li::before {
+  content: "/";
+  padding: 0 5px;
+  color: #ffffff;
+}
+
+li.active-lang {
+  color: #cda45e !important;
+}
+
+.book-table {
+  border-radius: 25px;
+  border: #cda45e 2px solid;
+  padding: 10px 20px;
+}
+.book-table:hover {
+  background-color: #cda45e;
+  color: #ffffff !important;
+}
+
+.dropdown {
+  position: relative;
+}
+.dropdown:hover > a > i,
+.dropdown:hover > a {
+  cursor: pointer;
+  color: #cda45e;
+}
+
+.dropdown > a > i {
+  margin-left: 5px;
+}
+
+.dropdown > ul {
+  width: 15dvw;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #29261f;
+  padding: 10px;
+  list-style: none;
+  display: none;
+  opacity: 0;
+}
+
+.dropdown:hover > ul {
+  display: block;
+  opacity: 1;
+}
+
+.dropdown > ul > li {
+  padding: 10px 20px;
+}
+
+.dropdown .dropdown:hover > ul {
+  top: 0;
+  left: -100%;
+}
+
+main {
+  top: -140px;
+}
+
+.intro {
+  background-image: url(../../../../public/images/hero-bg.jpg);
+  height: 100dvh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: -140px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+.intro:before {
+  content: "";
+  background: color-mix(in srgb, black, transparent 50%);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
 }
