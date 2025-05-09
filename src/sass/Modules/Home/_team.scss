@@ -1,0 +1,151 @@
+@use "../../variables";
+
+.team {
+    .title {
+        h2 {
+            font-size: 14px;
+            font-weight: 500;
+            color: #aaa;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        h2:after {
+            display: inline-block;
+            content: "";
+            width: 120px;
+            background-color: #cda45e;
+            height: 1px;
+            margin: 4px 10px;
+        }
+
+        p {
+            font-size: 36px;
+            font-weight: 600;
+            color: #cda45e;
+            font-family: "Playfair Display", serif;
+        }
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    &__member {
+        position: relative;
+        text-align: center;
+        background: #1a1814;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+    }
+
+    &__image {
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.85) 0%,
+                rgba(0, 0, 0, 0.65) 30%,
+                rgba(0, 0, 0, 0) 100%
+            );
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    &__overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        padding: 15px 15px 25px;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.3s ease;
+    }
+
+    &__member:hover {
+        .team__image::before {
+            opacity: 1;
+        }
+
+        .team__overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    &__social {
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            color: #fff;
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: #cda45e;
+            }
+
+            i {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__info {
+        text-align: center;
+        
+        h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+            font-family: "Playfair Display", serif;
+            margin-bottom: 5px;
+        }
+        
+        span {
+            font-size: 14px;
+            font-style: italic;
+            color: #cda45e;
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .team {
+        &__container {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            padding: 0 15px;
+        }
+    }
+} 
