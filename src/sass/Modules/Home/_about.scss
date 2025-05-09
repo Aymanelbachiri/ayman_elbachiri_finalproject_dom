@@ -1,0 +1,53 @@
+@use "../../variables";
+
+.about {
+    background-image: url(../../../../public/images/about-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    position: relative;
+
+    &:before {
+        content: "";
+        background: rgba(0, 0, 0, 0.729);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+    }
+}
+
+.about-wrapper {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.about-right {}
+
+.about-left {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: start;
+
+    li {
+        padding: 5px 0;
+    }
+
+    li>i {
+        margin-right: 5px;
+        color: variables.$accent-color;
+    }
+}
+
+.about-right>img {
+    max-width: 100%;
+    border: rgba(128, 128, 128, 0.477) 5px solid;
+
+    &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+}

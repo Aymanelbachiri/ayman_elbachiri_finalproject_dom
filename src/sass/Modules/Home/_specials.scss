@@ -1,0 +1,109 @@
+@use "../../variables";
+.specials {
+    position: relative;
+    background-color: variables.$background-color;
+}
+
+.specials-tabs {
+    display: flex;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    border-right: variables.$accent-color 1px solid;
+    
+    li {
+        width: 100%;
+        font-weight: 600;
+        font-size: 18px;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 1px;
+        font-family: variables.$default-font;
+        color: variables.$heading-color;
+        
+        &:hover {
+            color: variables.$accent-color;
+            border-right: variables.$heading-color 1px solid;
+        }
+        
+        &.active-tab {
+            color: variables.$heading-color;
+            background-color: variables.$accent-color;
+            border-right: variables.$heading-color 1px solid;
+        }
+    }
+}
+
+.specials-content {
+    display: flex;
+    min-height: 300px;
+}
+
+.specials-tab-content {
+    display: none;
+    
+    &.active {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.specials-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 20px;
+    
+    .specials-img {
+        width: 200px;
+        
+        img {
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+        }
+    }
+    
+    .specials-text {
+        flex: 1 1 400px;
+        
+        h3 {
+            font-size: 26px;
+            font-weight: 600;
+            color: variables.$accent-color;
+            margin-bottom: 20px;
+            font-family: variables.$heading-font;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: variables.$default-color;
+            font-size: 16px;
+            
+            &.fst-italic {
+                font-style: italic;
+                font-size: 14px;
+                margin-bottom: 25px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .specials-tabs {
+        justify-content: flex-start;
+        
+        li {
+            margin: 0 5px 10px 0;
+            padding: 6px 15px;
+            font-size: 16px;
+        }
+    }
+    
+    .specials-item {
+        flex-direction: column;
+        
+        .specials-img {
+            margin-bottom: 20px;
+        }
+    }
+} 

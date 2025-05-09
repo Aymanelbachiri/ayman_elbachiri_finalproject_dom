@@ -1,0 +1,205 @@
+@use "../../variables";
+
+.events {
+    position: relative;
+    background: url(../../../../public/images/events-bg.jpg) center center no-repeat;
+    background-size: cover;
+    padding: 80px 0;
+
+    &::before {
+        content: "";
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        inset: 0;
+    }
+
+    .container {
+        position: relative;
+        padding: 0 10vw;
+    }
+}
+
+.carousel {
+    position: relative;
+    z-index: 2;
+
+    &__slides {
+        position: relative;
+        max-width: 1100px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    &__slide {
+        align-items: center;
+        gap: 40px;
+        opacity: 0;
+        display: flex;
+        position: absolute;
+        right: -100%;
+        width: 100%;
+        transition: opacity 0.5s ease-in-out;
+
+        &.active {
+            animation: slide 5s forwards;
+            opacity: 1;
+            position: relative;
+            transition: opacity 0.5s ease-in-out;
+        }
+    }
+
+    @keyframes slide {
+        0% {
+            right: -100%;
+        }
+
+        10% {
+            right: 0;
+        }
+
+        90% {
+            right: 0;
+        }
+
+        100% {
+            right: 100%;
+        }
+    }
+
+    &__image {
+        flex: 0 0 45%;
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+        }
+    }
+
+    &__content {
+        flex: 1;
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #cda45e;
+        }
+
+        .carousel__price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 15px;
+            
+
+            &::after {
+                display: block;
+                content: '';
+                width: 60px;
+                background-color: variables.$accent-color;
+                height:3px;
+                margin: 4px 10px;
+
+            }
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+
+            li {
+                display: flex;
+                align-items: center;
+                margin-bottom: 8px;
+                color: rgba(255, 255, 255, 0.7);
+
+                i {
+                    color: #cda45e;
+                    margin-right: 10px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    &__dots {
+        position: absolute;
+        left: 50%;
+        bottom: -50px;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &.active {
+                background: #cda45e;
+            }
+
+            &:hover {
+                background: #cda45e;
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .carousel__price::after{
+        margin: auto!important;
+    }
+    .carousel {
+        &__slide {
+            flex-direction: column;
+            text-align: center;
+            gap: 20px;
+        }
+
+        &__image {
+            flex: 0 0 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        &__content {
+            ul {
+                li {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .events .container {
+        padding: 0 20px;
+    }
+
+    .carousel {
+        &__content {
+            h2 {
+                font-size: 2rem;
+            }
+
+            .carousel__price {
+                font-size: 1.75rem;
+            }
+        }
+    }
+}

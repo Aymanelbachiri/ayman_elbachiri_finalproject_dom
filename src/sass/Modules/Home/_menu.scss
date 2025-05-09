@@ -1,0 +1,140 @@
+@use "../../variables";
+
+.menu {
+    padding: 60px 0;
+    position: relative;
+    background-color: variables.$background-color;
+}
+
+.menu .container {
+    padding: 0 10vw;
+}
+
+.menu-title {
+    text-align: center;
+    padding-bottom: 30px;
+
+    h2 {
+        font-size: 32px;
+        font-weight: 700;
+        color: variables.$accent-color;
+        margin-bottom: 20px;
+        font-family: variables.$heading-font;
+        position: relative;
+        padding-bottom: 15px;
+
+        &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: variables.$accent-color;
+            bottom: 0;
+            left: calc(50% - 25px);
+        }
+    }
+
+    p {
+        margin-bottom: 0;
+        color: variables.$default-color;
+        font-size: 16px;
+    }
+}
+.menu-filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    li {
+        cursor: pointer;
+        margin: 0 10px;
+        font-weight: 500;
+        padding: 8px 16px;
+        transition: all 0.3s ease;
+        border-radius: 50px;
+        font-family: variables.$default-font;
+        color: variables.$heading-color;
+
+        &:hover {
+            color: variables.$accent-color;
+        }
+
+        &.filter-active {
+            color: variables.$accent-color;
+        }
+    }
+}
+
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+
+    img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: 5px solid rgba(255, 255, 255, 0.1);
+        margin-right: 15px;
+        object-fit: cover;
+    }
+
+    .menu-content {
+        flex: 1;
+
+        a {
+            display: flex;
+            justify-content: space-between;
+            color: variables.$heading-color;
+            font-weight: 600;
+            font-size: 18px;
+            padding-right: 10px;
+            transition: 0.3s;
+            font-family: variables.$heading-font;
+            text-decoration: none;
+
+            &:hover {
+                color: variables.$accent-color;
+            }
+
+            span {
+                background: variables.$accent-color;
+                color: variables.$heading-color;
+                font-family: variables.$default-font;
+                padding: 5px 10px;
+                font-weight: 600;
+                font-size: 16px;
+                border-radius: 5px;
+            }
+        }
+
+        p {
+            margin: 10px 0 0 0;
+            font-style: italic;
+            font-size: 14px;
+            color: variables.$default-color;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-filters {
+        flex-wrap: wrap;
+
+        li {
+            margin: 5px;
+        }
+    }
+
+    .menu-items {
+        grid-template-columns: 1fr;
+    }
+}

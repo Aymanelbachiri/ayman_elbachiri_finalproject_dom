@@ -10,8 +10,16 @@
     transition: all 0.5s;
 }
 
-h1 {
+.hidden {
+    display: none !important;
+}
+
+h1,
+h2,
+h3,
+h4,p {
     font-family: variables.$heading-font;
+    color: variables.$heading-color;
 }
 
 body {
@@ -48,7 +56,8 @@ header {
 .top-contacts {
     display: flex;
     gap: 20px;
-    a>i{
+
+    a>i {
         color: variables.$accent-color;
     }
 }
@@ -75,13 +84,13 @@ header {
     color: variables.$heading-color;
 }
 
-nav>ul>li {
+li {
     color: variables.$nav-color;
+    list-style: none;
 }
 
 .h-list {
     display: flex;
-    list-style: none;
 }
 
 .main-header>nav>.h-list {
@@ -110,7 +119,7 @@ li.active-lang {
 }
 
 //book table button 
-.book-table {
+.btn {
     border-radius: 25px;
     border: variables.$accent-color 2px solid;
     padding: 10px 20px;
@@ -118,7 +127,7 @@ li.active-lang {
     &:hover {
         background-color: variables.$accent-color;
         color: variables.$nav-color !important;
-        
+
     }
 }
 
@@ -128,7 +137,7 @@ li.active-lang {
 
     &:hover {
 
-        >a>i,
+        >i,
         >a {
             cursor: pointer;
             color: variables.$accent-color;
@@ -136,7 +145,7 @@ li.active-lang {
     }
 }
 
-.dropdown>a>i {
+.dropdown>i {
     margin-left: 5px;
 }
 
@@ -164,4 +173,69 @@ li.active-lang {
 .dropdown .dropdown:hover>ul {
     top: 0;
     left: -100%;
+}
+
+.hide-desktop {
+    display: none !important;
+}
+
+
+@media (width < 990px) {
+    .main-header{
+        justify-content: space-between;
+        padding: 20px 5vw;
+    }
+    .language-switch {
+        display: none;
+    }
+
+    .book-table {
+        display: none !important;
+    }
+
+    .top-header {
+        padding: 20px;
+        justify-content: center;
+    }
+
+    nav>i {
+        color: variables.$heading-color;
+        font-size: 28px;
+    }
+
+    .dropdown>ul {
+        width: 100%;
+        padding: 0;
+    }
+
+    .dropdown>ul>li {
+        padding: 20px 0;
+    }
+
+    ul>li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hide-mobile {
+        display: none !important;
+    }
+
+    .hide-desktop {
+        display: initial !important;
+    }
+
+    nav>ul {
+        position: absolute;
+        width: 90%;
+        left: 5%;
+        top: 10.2dvh;
+        flex-direction: column;
+        background-color: variables.$nav-dropdown-background-color;
+        padding: 20px 0;
+    }
+
+    .dropdown>ul {
+        display: block;
+    }
 }

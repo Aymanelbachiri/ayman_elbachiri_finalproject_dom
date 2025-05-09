@@ -32,7 +32,7 @@
         <div class="main-header">
             <h1 class="logo">Restaurantly</h1>
             <nav>
-                <ul class="h-list">
+                <ul class="h-list hide-mobile">
                     <li><a href="" class="link">Home</a></li>
                     <li><a href="" class="link">About</a></li>
                     <li>
@@ -51,7 +51,8 @@
                         <a href="" class="link">Gallery</a>
                     </li>
                     <li class="dropdown">
-                        <a href="" class="link">Dropdown<i class="bi bi-chevron-down"></i></a>
+                        <a href="" class="link">Dropdown</a>
+                        <i class="bi bi-chevron-down"></i>
                         <ul>
                             <li><a class="link">Dropdown 1</a></li>
                             <li class="dropdown">
@@ -71,22 +72,396 @@
                         <a href="" class="link">Contact</a>
                     </li>
                 </ul>
+                <i class="bi bi-list nav-toggle hide-desktop"></i>
             </nav>
-            <a href="" class="book-table link">Book a table</a>
+            <a href="" class="btn link hide-mobile">Book a table</a>
         </div>
     </header>
     <main>
-        <div class="intro">
+        <section class="intro">
             <div class="intro-left">
                 <h1>Welcome to
                     <span>Restaurantly</span>
                 </h1>
+                <p>Delivering great food for more than 18 years!</p>
+                <div class="buttons">
+                    <a href="" class="btn link">OUR MENU</a>
+                    <a href="" class="btn link">BOOK A TABLE</a>
+                </div>
+
             </div>
             <div class="intro-right">
 
             </div>
-        </div>
+        </section>
+        <section class="about">
+            <div class="about-wrapper section">
+                <div class="about-left">
+                    <h2>Voluptatem dignissimos provident</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua.</p>
+                    <ul>
+                        <li><i class="bi bi-check2-all"></i>Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </li>
+                        <li><i class="bi bi-check2-all"></i>Duis aute irure dolor in reprehenderit in voluptate velit.
+                        </li>
+                        <li><i class="bi bi-check2-all"></i>Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Duis aute irure dolor in reprehenderit
+                            in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.
+                        </li>
+                    </ul>
+                    <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                        in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non
+                        proident</p>
+                </div>
+                <div class="about-right">
+                    <img src="./public/images/about.jpg" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="why-us section">
+            <div class="title">
+                <h2>WHY US</h2>
+                <p>Why Choose Our Restaurant</p>
+            </div>
+            <div class="box-container">
+                <div class="box">
+                    <span>01</span>
+                    <h4>Lorem, ipsum.</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi quis facilis assumenda doloremque
+                        similique repellendus magni doloribus quae. At reiciendis molestiae eius voluptates ratione
+                        beatae.</p>
+                </div>
+                <div class="box">
+                    <span>02</span>
+                    <h4>Lorem, ipsum.</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi quis facilis assumenda doloremque
+                        similique repellendus magni doloribus quae. At reiciendis molestiae eius voluptates ratione
+                        beatae.</p>
+                </div>
+                <div class="box">
+                    <span>03</span>
+                    <h4>Lorem, ipsum.</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi quis facilis assumenda doloremque
+                        similique repellendus magni doloribus quae. At reiciendis molestiae eius voluptates ratione
+                        beatae.</p>
+                </div>
+            </div>
+        </section>
+        <section class="menu section">
+            <div class="container">
+                <div class="title">
+                    <h2>Menu</h2>
+                    <p>Check Our Tasty Menu</p>
+                </div>
+
+                <div class="menu-content">
+                    <ul class="menu-filters">
+                        <li class="filter-active" data-filter="*">All</li>
+                        <li data-filter=".filter-starters">Starters</li>
+                        <li data-filter=".filter-salads">Salads</li>
+                        <li data-filter=".filter-specialty">Specialty</li>
+                    </ul>
+
+                    <div class="menu-items">
+                        <div class="menu-item filter-starters">
+                            <img src="./public/images/lobster-bisque.jpg" alt="Lobster Bisque">
+                            <div class="menu-content">
+                                <a href="#">Lobster Bisque <span>$5.95</span></a>
+                                <p>Lorem, deren, trataro, filede, nerada</p>
+                            </div>
+                        </div>
+                        <div class="menu-item filter-starters">
+                            <img src="./public/images/bread-barrel.jpg" alt="Bread Barrel">
+                            <div class="menu-content">
+                                <a href="#">Bread Barrel <span>$6.95</span></a>
+                                <p>Lorem, deren, trataro, filede, nerada</p>
+                            </div>
+                        </div>
+                        <div class="menu-item filter-starters">
+                            <img src="./public/images/cake.jpg" alt="Crab Cake">
+                            <div class="menu-content">
+                                <a href="#">Crab Cake <span>$7.95</span></a>
+                                <p>A delicate crab cake served on a toasted roll with lettuce and tartar sauce</p>
+                            </div>
+                        </div>
+                        <div class="menu-item filter-salads">
+                            <img src="./public/images/caesar.jpg" alt="Caesar Selections">
+                            <div class="menu-content">
+                                <a href="#">Caesar Selections <span>$8.95</span></a>
+                                <p>Lorem, deren, trataro, filede, nerada</p>
+                            </div>
+                        </div>
+                        <div class="menu-item filter-specialty">
+                            <img src="./public/images/tuscan-grilled.jpg" alt="Tuscan Grilled">
+                            <div class="menu-content">
+                                <a href="#">Tuscan Grilled <span>$9.95</span></a>
+                                <p>Grilled chicken with provolone, artichoke hearts, and roasted red pesto</p>
+                            </div>
+                        </div>
+                        <div class="menu-item filter-starters">
+                            <img src="./public/images/mozzarella.jpg" alt="Mozzarella Stick">
+                            <div class="menu-content">
+                                <a href="#">Mozzarella Stick <span>$4.95</span></a>
+                                <p>Lorem, deren, trataro, filede, nerada</p>
+                            </div>
+                        </div>
+                        <div class="menu-item filter-salads">
+                            <img src="./public/images/greek-salad.jpg" alt="Greek Salad">
+                            <div class="menu-content">
+                                <a href="#">Greek Salad <span>$9.95</span></a>
+                                <p>Fresh spinach, crisp romaine, tomatoes, and Greek olives</p>
+                            </div>
+                        </div>
+                        <div class="menu-item filter-salads">
+                            <img src="./public/images/spinach-salad.jpg" alt="Spinach Salad">
+                            <div class="menu-content">
+                                <a href="#">Spinach Salad <span>$9.95</span></a>
+                                <p>Fresh spinach with mushrooms, hard boiled egg, and warm bacon vinaigrette</p>
+                            </div>
+                        </div>
+                        <div class="menu-item filter-specialty">
+                            <img src="./public/images/lobster-roll.jpg" alt="Lobster Roll">
+                            <div class="menu-content">
+                                <a href="#">Lobster Roll <span>$12.95</span></a>
+                                <p>Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="specials section">
+            <div class="title">
+                <h2>Specials</h2>
+                <p>Check Our Specials</p>
+            </div>
+
+            <div class="specials-content">
+                <ul class="specials-tabs">
+                    <li class="active-tab" data-tab="tab-1">Modi sit est</li>
+                    <li data-tab="tab-2">Unde praesentium sed</li>
+                    <li data-tab="tab-3">Pariatur explicabo vel</li>
+                    <li data-tab="tab-4">Nostrum qui quasi</li>
+                    <li data-tab="tab-5">Iusto ut expedita aut</li>
+                </ul>
+
+                <div class="specials-tab-content active" id="tab-1">
+                    <div class="specials-item">
+                        <div class="specials-text">
+                            <h3>Architecto ut aperiam autem id</h3>
+                            <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde
+                                sonata raqer a videna mareta paulona marka</p>
+                            <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos
+                                ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet
+                                eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus
+                                nostrum rem vero.</p>
+                        </div>
+                        <div class="specials-img">
+                            <img src="./public/images/specials-1.png" alt="Special 1">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="specials-tab-content" id="tab-2">
+                    <div class="specials-item">
+
+                        <div class="specials-text">
+                            <h3>Et blanditiis nemo veritatis excepturi</h3>
+                            <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde
+                                sonata raqer a videna mareta paulona marka</p>
+                            <p>Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et reiciendis sunt
+                                sunt est. Non aliquid repellendus itaque accusamus eius et velit ipsa voluptates. Optio
+                                nesciunt eaque beatae accusamus lerode pakto madirna desera vafle de nideran pal</p>
+                        </div>
+                        <div class="specials-img">
+                            <img src="./public/images/specials-2.png" alt="Special 2">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="specials-tab-content" id="tab-3">
+                    <div class="specials-item">
+                        <div class="specials-text">
+                            <h3>Impedit facilis occaecati odio neque aperiam sit</h3>
+                            <p class="fst-italic">Eos voluptatibus quo. Odio similique illum id quidem non enim fuga.
+                                Qui natus non sunt dicta dolor et. In asperiores velit quaerat perferendis aut</p>
+                            <p>Iure officiis odit rerum. Harum sequi eum illum corrupti culpa veritatis quisquam. Neque
+                                necessitatibus illo rerum eum ut. Commodi ipsam minima molestiae sed laboriosam a iste
+                                odio. Earum odit nesciunt fugiat sit ullam. Soluta et harum voluptatem optio quae</p>
+                        </div>
+                        <div class="specials-img">
+                            <img src="./public/images/specials-3.png" alt="Special 3">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="specials-tab-content" id="tab-4">
+                    <div class="specials-item">
+                        <div class="specials-text">
+                            <h3>Fuga dolores inventore laboriosam ut est accusamus laboriosam dolore</h3>
+                            <p class="fst-italic">Totam aperiam accusamus. Repellat consequuntur iure voluptas iure
+                                porro quis delectus</p>
+                            <p>Eaque consequuntur consequuntur libero expedita in voluptas. Nostrum ipsam necessitatibus
+                                aliquam fugiat debitis quis velit. Eum ex maxime error in consequatur corporis atque.
+                                Eligendi asperiores sed qui veritatis aperiam quia a laborum inventore</p>
+                        </div>
+                        <div class="specials-img">
+                            <img src="./public/images/specials-4.png" alt="Special 4">
+                        </div>
+                    </div>
+                </div>
+                <div class="specials-tab-content" id="tab-5">
+                    <div class="specials-item">
+                        <div class="specials-text">
+                            <h3>Est eveniet ipsam sindera pad rone matrelat sando reda</h3>
+                            <p class="fst-italic">Omnis blanditiis saepe eos autem qui sunt debitis porro quia.</p>
+                            <p>Exercitationem nostrum omnis. Ut reiciendis repudiandae minus. Omnis recusandae ut non
+                                quam ut quod eius qui. Ipsum quia odit vero atque qui quibusdam amet. Occaecati sed est
+                                sint aut vitae molestiae voluptate vel</p>
+                        </div>
+                        <div class="specials-img">
+                            <img src="./public/images/specials-5.png" alt="Special 5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="events section">
+            <div class="container">
+                <div class="carousel">
+                    <div class="carousel__slides">
+                        <!-- Slide 1 -->
+                        <div class="carousel__slide active">
+                            <div class="carousel__image">
+                                <img src="./public/images/events-slider-1.jpg" alt="Birthday Parties">
+                            </div>
+                            <div class="carousel__content">
+                                <h2>Birthday Parties</h2>
+                                <div class="carousel__price">$189</div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p>
+                                <ul>
+                                    <li><i class="bi bi-check2-all"></i> Ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat.</li>
+                                    <li><i class="bi bi-check2-all"></i> Duis aute irure dolor in reprehenderit in
+                                        voluptate velit.</li>
+                                    <li><i class="bi bi-check2-all"></i> Ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat.</li>
+                                </ul>
+                                <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="carousel__slide">
+                            <div class="carousel__image">
+                                <img src="./public/images/events-slider-2.jpg" alt="Private Parties">
+                            </div>
+                            <div class="carousel__content">
+                                <h2>Private Parties</h2>
+                                <div class="carousel__price">$290</div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p>
+                                <ul>
+                                    <li><i class="bi bi-check2-all"></i> Ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat.</li>
+                                    <li><i class="bi bi-check2-all"></i> Duis aute irure dolor in reprehenderit in
+                                        voluptate velit.</li>
+                                    <li><i class="bi bi-check2-all"></i> Ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat.</li>
+                                </ul>
+                                <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="carousel__slide">
+                            <div class="carousel__image">
+                                <img src="./public/images/events-slider-3.jpg" alt="Custom Parties">
+                            </div>
+                            <div class="carousel__content">
+                                <h2>Custom Parties</h2>
+                                <div class="carousel__price">$99</div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p>
+                                <ul>
+                                    <li><i class="bi bi-check2-all"></i> Ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat.</li>
+                                    <li><i class="bi bi-check2-all"></i> Duis aute irure dolor in reprehenderit in
+                                        voluptate velit.</li>
+                                    <li><i class="bi bi-check2-all"></i> Ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat.</li>
+                                </ul>
+                                <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel__dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="gallery section">
+            <div class="title">
+                <h2>Gallery</h2>
+                <p>Some photos from Our Restaurant</p>
+            </div>
+            <div class="gallery__container">
+                <figure class="gallery_item">
+                    <img src="./public/images/gallery-1.jpg" alt="" class="gallery_image">
+                </figure>
+                <figure class="gallery_item">
+                    <img src="./public/images/gallery-2.jpg" alt="" class="gallery_image">
+                </figure>
+                <figure class="gallery_item">
+                    <img src="./public/images/gallery-3.jpg" alt="" class="gallery_image">
+                </figure>
+                <figure class="gallery_item">
+                    <img src="./public/images/gallery-4.jpg" alt="" class="gallery_image">
+                </figure>
+                <figure class="gallery_item">
+                    <img src="./public/images/gallery-5.jpg" alt="" class="gallery_image">
+                </figure>
+                <figure class="gallery_item">
+                    <img src="./public/images/gallery-6.jpg" alt="" class="gallery_image">
+                </figure>
+                <figure class="gallery_item">
+                    <img src="./public/images/gallery-7.jpg" alt="" class="gallery_image">
+                </figure>
+                <figure class="gallery_item">
+                    <img src="./public/images/gallery-8.jpg" alt="" class="gallery_image">
+                </figure>
+            </div>
+        </section>
+        <section class="contact">
+            <div class="section">
+                <div class="title">
+                    <h2>Contact</h2>
+                    <p>Contact Us</p>
+                </div>
+            </div>
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d131724.09969858016!2d-7.669393086506583!3d33.572403231251805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7cd4778aa113b%3A0xb06c1d84f310fd3!2sCasablanca!5e1!3m2!1sen!2sma!4v1746794290183!5m2!1sen!2sma"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
     </main>
+    <footer>
+        
+    </footer>
     <script src="./public/js/app.js"></script>
 </body>
 

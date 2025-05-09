@@ -1,0 +1,84 @@
+@use "../../variables";
+
+main {
+    top: -140px;
+}
+
+p {
+    color: variables.$default-color;
+    font-family: variables.$default-font;
+}
+
+.section {
+    padding: 10vh 10vw;
+}
+
+.intro {
+    background-image: url(../../../../public/images/hero-bg.jpg);
+    height: 100dvh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: -140px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+    z-index: 1;
+    padding: 10px;
+}
+
+.intro:before {
+    content: "";
+    background: color-mix(in srgb, black, transparent 50%);
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+.intro-left {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: flex-start
+}
+
+.intro-left>h1 {
+    color: variables.$heading-color;
+    font-size: 48px;
+
+    span {
+        color: variables.$accent-color;
+    }
+
+}
+
+.intro-left>p {
+    font-size: 24px;
+    color: variables.$heading-color;
+}
+
+.intro-right {
+    width: 50%;
+}
+
+@media (width <990px) {
+    .intro {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            font-size: 32px
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .intro-left {
+            align-items: center;
+        }
+    }
+}
